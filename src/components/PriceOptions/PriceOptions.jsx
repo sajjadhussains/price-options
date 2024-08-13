@@ -5,7 +5,7 @@ const PriceOptions = () => {
     {
       id: 1,
       name: "Basic Membership",
-      price: 29.99,
+      price: 29,
       duration: "1 month",
       features: [
         "Access to gym equipment",
@@ -16,7 +16,7 @@ const PriceOptions = () => {
     {
       id: 2,
       name: "Standard Membership",
-      price: 49.99,
+      price: 49,
       duration: "1 month",
       features: [
         "Access to gym equipment",
@@ -28,7 +28,7 @@ const PriceOptions = () => {
     {
       id: 3,
       name: "Premium Membership",
-      price: 69.99,
+      price: 69,
       duration: "1 month",
       features: [
         "Access to gym equipment",
@@ -42,7 +42,7 @@ const PriceOptions = () => {
     {
       id: 4,
       name: "Annual Membership",
-      price: 499.99,
+      price: 499,
       duration: "12 months",
       features: [
         "Access to gym equipment",
@@ -56,7 +56,7 @@ const PriceOptions = () => {
     {
       id: 5,
       name: "Student Membership",
-      price: 24.99,
+      price: 24,
       duration: "1 month",
       features: [
         "Access to gym equipment",
@@ -68,10 +68,14 @@ const PriceOptions = () => {
 
   return (
     <div>
-      <h2>Price Options</h2>
-      {priceOptions.map((option) => (
-        <PriceOption key={option.id} option={option}></PriceOption>
-      ))}
+      <h2 className="text-3xl text-center font-bold mb-10 text-slate-500">
+        Best Prices in the Town
+      </h2>
+      <div className="grid md:grid-cols-3 max-w-6xl mx-auto gap-5">
+        {priceOptions.map((option) => (
+          <PriceOption key={option.id} option={option}></PriceOption>
+        ))}
+      </div>
     </div>
   );
 };
