@@ -1,5 +1,5 @@
 import PropTypes from "prop-types";
-
+import { FaCheckCircle } from "react-icons/fa";
 const PriceOption = ({ option }) => {
   const { price, name, features } = option;
   return (
@@ -11,7 +11,12 @@ const PriceOption = ({ option }) => {
       <h2 className="text-center text-3xl mb-6">{name}</h2>
       <div className="pl-6 flex-grow mb-4">
         {features.map((feature, idx) => (
-          <li key={idx}>{feature}</li>
+          <div key={idx} className="flex items-center">
+            <FaCheckCircle />
+            <li className="list-none ms-3" key={idx}>
+              {feature}
+            </li>
+          </div>
         ))}
       </div>
       <button className="px-10 py-5 bg-green-500 rounded-2xl">Buy Now</button>
